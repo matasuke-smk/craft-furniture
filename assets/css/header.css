@@ -180,6 +180,7 @@
     color: var(--color-white);
     font-weight: var(--weight-semibold);
     margin-left: var(--space-2);
+    vertical-align: middle;
 }
 
 .nav__item--cta .nav__link:hover {
@@ -190,6 +191,8 @@
 
 .nav__link--contact {
     background: var(--color-primary);
+    margin-left: var(--space-2);
+    vertical-align: middle;
 }
 
 .nav__link--contact:hover {

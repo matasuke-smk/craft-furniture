@@ -296,6 +296,141 @@
     .grid--4 {
         grid-template-columns: 1fr;
     }
+}
+
+/* Page Hero Sections */
+.page-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+}
+
+.page-hero__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.page-hero__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.page-hero__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: var(--space-12) 0;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.page-hero__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+}
+
+.page-hero__title {
+    font-family: var(--font-serif);
+    font-size: var(--text-5xl);
+    font-weight: var(--weight-bold);
+    margin-bottom: var(--space-6);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-hero__subtitle {
+    font-size: var(--text-xl);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-8);
+    opacity: 0.9;
+}
+
+.page-hero .breadcrumb {
+    margin-top: var(--space-8);
+}
+
+.page-hero .breadcrumb__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page-hero .breadcrumb__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.page-hero .breadcrumb__item:not(:last-child)::after {
+    content: '>';
+    opacity: 0.6;
+    font-size: var(--text-sm);
+}
+
+.page-hero .breadcrumb__link {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    opacity: 0.8;
+    transition: opacity var(--transition-fast) var(--ease-out);
+}
+
+.page-hero .breadcrumb__link:hover {
+    opacity: 1;
+}
+
+.page-hero .breadcrumb__item--current {
+    color: var(--color-white);
+    font-size: var(--text-sm);
+    opacity: 1;
+    font-weight: var(--weight-medium);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .page-hero {
+        min-height: 50vh;
+    }
+    
+    .page-hero__title {
+        font-size: var(--text-3xl);
+    }
+    
+    .page-hero__subtitle {
+        font-size: var(--text-lg);
+    }
+    
+    .page-hero__inner {
+        padding: 0 var(--space-4);
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero {
+        min-height: 40vh;
+    }
+    
+    .page-hero__title {
+        font-size: var(--text-2xl);
+    }
+    
+    .page-hero__subtitle {
+        font-size: var(--text-base);
+    }
     
     .grid {
         gap: var(--space-4);
