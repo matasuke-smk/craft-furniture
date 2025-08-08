@@ -33,53 +33,11 @@
     margin: 0 auto;
 }
 
-/* Breadcrumb */
-.breadcrumb {
-    padding: var(--space-4) 0;
-    background: var(--color-gray-light);
-    border-bottom: 1px solid rgba(224, 224, 224, 0.5);
-}
-
-.breadcrumb__list {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.breadcrumb__item {
-    display: flex;
-    align-items: center;
-}
-
-.breadcrumb__item:not(:last-child)::after {
-    content: '>';
-    margin-left: var(--space-2);
-    color: var(--color-gray-dark);
-    font-size: var(--text-sm);
-}
-
-.breadcrumb__link {
-    color: var(--color-accent);
-    text-decoration: none;
-    font-size: var(--text-sm);
-    transition: color var(--transition-fast) var(--ease-out);
-}
-
-.breadcrumb__link:hover {
-    color: var(--color-accent-700);
-}
-
-.breadcrumb__item--current {
-    color: var(--color-text);
-    font-size: var(--text-sm);
-}
+/* Breadcrumb - Removed to use common.css page-hero breadcrumb styles */
 
 /* Works Filter */
 .works-filter {
-    padding: var(--space-12) 0;
+    padding: var(--space-6) 0;
     background: var(--color-white);
     border-bottom: 1px solid var(--color-gray-light);
     position: sticky;
@@ -116,9 +74,9 @@
 .works-filter__controls {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-6);
+    gap: var(--space-4);
     align-items: flex-end;
-    padding: var(--space-6);
+    padding: var(--space-4);
     background: var(--color-gray-light);
     border-radius: var(--radius-xl);
     position: relative;
