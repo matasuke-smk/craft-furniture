@@ -54,29 +54,37 @@
 
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <nav class="nav">
             <div class="nav__container">
-                <!-- Logo/Brand -->
                 <div class="nav__brand">
-                    <a href="../" class="nav__logo" aria-label="クラフトファニチャー ホームページ">
+                    <a href="../" class="nav__logo">
                         <span class="nav__logo-text">Craft Furniture</span>
-                        <span class="nav__logo-sub">クラフトファニチャー</span>
+                        <span class="nav__logo-sub">株式会社クラフトファニチャー</span>
                     </a>
                 </div>
 
-                <!-- Mobile menu toggle -->
-                <button class="nav__toggle" aria-label="メニューを開く" aria-expanded="false">
+                <!-- Mobile Menu Button -->
+                <button class="nav__toggle" id="nav-toggle" aria-label="メニュー">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
 
-                <!-- Navigation menu -->
-                <div class="nav__menu">
+                <!-- Navigation Menu -->
+                <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
+                            <a href="../" class="nav__link">ホーム</a>
+                        </li>
+                        <li class="nav__item nav__item--dropdown">
                             <a href="../works/" class="nav__link">施工事例</a>
+                            <ul class="nav__dropdown">
+                                <li><a href="../works/?filter=dining">ダイニングテーブル</a></li>
+                                <li><a href="../works/?filter=desk">デスク</a></li>
+                                <li><a href="../works/?filter=storage">収納家具</a></li>
+                                <li><a href="../works/?filter=others">その他</a></li>
+                            </ul>
                         </li>
                         <li class="nav__item">
                             <a href="../process/" class="nav__link">製作工程</a>
@@ -87,14 +95,24 @@
                         <li class="nav__item">
                             <a href="../wood-guide/" class="nav__link">木材図鑑</a>
                         </li>
-                        <li class="nav__item">
-                            <a href="../voice/" class="nav__link nav__link--active">お客様の声</a>
+                        <li class="nav__item nav__item--dropdown">
+                            <a href="../about/" class="nav__link">会社情報</a>
+                            <ul class="nav__dropdown">
+                                <li><a href="../about/">会社概要</a></li>
+                                <li><a href="../flow/">納品までの流れ</a></li>
+                                <li><a href="../delivery/">納品エリア</a></li>
+                                <li><a href="../showroom/">ショールーム</a></li>
+                                <li><a href="../faq/">よくある質問</a></li>
+                            </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="../about/" class="nav__link">会社概要</a>
+                            <a href="./" class="nav__link nav__link--active">お客様の声</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="../news/" class="nav__link">お知らせ</a>
                         </li>
                         <li class="nav__item nav__item--cta">
-                            <a href="../simulator/" class="nav__link">見積もり</a>
+                            <a href="../simulator/" class="nav__link nav__link--cta">見積もり</a>
                         </li>
                         <li class="nav__item nav__item--cta">
                             <a href="../contact/" class="nav__link nav__link--contact">お問い合わせ</a>
@@ -109,7 +127,15 @@
         <!-- Page Hero -->
         <section class="page-hero">
             <div class="page-hero__image">
-                <img src="../assets/images/voice/hero-bg.jpg" alt="満足されたお客様" loading="eager">
+                <div class="image-placeholder image-placeholder--hero">
+                    <div class="image-placeholder__content">
+                        <svg class="image-placeholder__icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                        </svg>
+                        <div class="image-placeholder__text">準備中</div>
+                        <div class="image-placeholder__subtext">お客様の声の画像</div>
+                    </div>
+                </div>
             </div>
             <div class="page-hero__content">
                 <div class="container">
@@ -378,91 +404,71 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__inner">
-                <!-- Company Info -->
-                <div class="footer__company">
+            <div class="footer__content">
+                <div class="footer__brand">
                     <div class="footer__logo">
-                        <img src="../assets/images/logo-white.svg" alt="Craft Furniture" width="180" height="54">
+                        <span class="footer__logo-text">Craft Furniture</span>
+                        <span class="footer__logo-sub">株式会社クラフトファニチャー</span>
                     </div>
                     <p class="footer__description">
-                        一生を共にする、家具づくり。<br>
-                        職人の技術と厳選された素材で、<br>
-                        お客様だけの特別な家具をお作りします。
+                        東京を拠点に、一枚板を使ったオーダーメイド家具の製造・販売を行っています。職人の技術と木の温もりを大切に、一生を共にする家具をお作りします。
                     </p>
-                    
                     <div class="footer__contact">
-                        <div class="footer__contact-item">
-                            <span class="footer__contact-label">お問い合わせ</span>
-                            <a href="tel:03-1234-5678" class="footer__contact-value">03-1234-5678</a>
-                        </div>
-                        <div class="footer__contact-item">
-                            <span class="footer__contact-label">営業時間</span>
-                            <span class="footer__contact-value">9:00-18:00 (土日祝除く)</span>
-                        </div>
+                        <p class="footer__phone">TEL: 03-1234-5678</p>
+                        <p class="footer__address">〒123-4567 東京都○○区○○ 1-2-3</p>
                     </div>
                 </div>
 
-                <!-- Quick Links -->
                 <nav class="footer__nav">
                     <div class="footer__nav-section">
                         <h3 class="footer__nav-title">サービス</h3>
                         <ul class="footer__nav-list">
-                            <li><a href="../works/" class="footer__nav-link">施工事例</a></li>
-                            <li><a href="../process/" class="footer__nav-link">製作工程</a></li>
-                            <li><a href="../craftsmen/" class="footer__nav-link">職人紹介</a></li>
-                            <li><a href="../wood-guide/" class="footer__nav-link">木材図鑑</a></li>
+                            <li><a href="../works/">施工事例</a></li>
+                            <li><a href="../process/">製作工程</a></li>
+                            <li><a href="../craftsmen/">職人紹介</a></li>
+                            <li><a href="../wood-guide/">木材図鑑</a></li>
+                            <li><a href="../simulator/">見積もり</a></li>
                         </ul>
                     </div>
-                    
-                    <div class="footer__nav-section">
-                        <h3 class="footer__nav-title">サポート</h3>
-                        <ul class="footer__nav-list">
-                            <li><a href="../voice/" class="footer__nav-link">お客様の声</a></li>
-                            <li><a href="../faq/" class="footer__nav-link">よくある質問</a></li>
-                            <li><a href="../flow/" class="footer__nav-link">ご注文の流れ</a></li>
-                            <li><a href="../showroom/" class="footer__nav-link">ショールーム</a></li>
-                        </ul>
-                    </div>
-                    
+
                     <div class="footer__nav-section">
                         <h3 class="footer__nav-title">会社情報</h3>
                         <ul class="footer__nav-list">
-                            <li><a href="../about/" class="footer__nav-link">会社概要</a></li>
-                            <li><a href="../news/" class="footer__nav-link">お知らせ</a></li>
-                            <li><a href="../delivery/" class="footer__nav-link">配送エリア</a></li>
-                            <li><a href="../privacy/" class="footer__nav-link">プライバシーポリシー</a></li>
+                            <li><a href="../about/">会社概要</a></li>
+                            <li><a href="../flow/">納品までの流れ</a></li>
+                            <li><a href="../delivery/">納品エリア</a></li>
+                            <li><a href="../showroom/">ショールーム</a></li>
+                            <li><a href="../faq/">よくある質問</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__nav-section">
+                        <h3 class="footer__nav-title">その他</h3>
+                        <ul class="footer__nav-list">
+                            <li><a href="./">お客様の声</a></li>
+                            <li><a href="../news/">お知らせ</a></li>
+                            <li><a href="../contact/">お問い合わせ</a></li>
+                            <li><a href="../privacy/">プライバシーポリシー</a></li>
                         </ul>
                     </div>
                 </nav>
 
-                <!-- CTA -->
-                <div class="footer__cta">
-                    <h3 class="footer__cta-title">お見積もり相談</h3>
-                    <p class="footer__cta-description">オーダー家具のご相談・お見積もりは無料です</p>
-                    <div class="footer__cta-buttons">
-                        <a href="../simulator/" class="btn btn--outline btn--sm">見積もりシミュレーター</a>
-                        <a href="../contact/" class="btn btn--primary btn--sm">お問い合わせ</a>
+                <div class="footer__social">
+                    <h3 class="footer__social-title">Follow Us</h3>
+                    <div class="footer__social-links">
+                        <a href="https://www.instagram.com/craft_furniture_jp/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Footer Bottom -->
             <div class="footer__bottom">
-                <div class="footer__bottom-inner">
-                    <div class="footer__social">
-                        <a href="https://instagram.com/craft_furniture_tokyo" class="footer__social-link" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                    </div>
-                    
-                    <p class="footer__copyright">
-                        © 2024 Craft Furniture Inc. All Rights Reserved.
-                    </p>
-                </div>
+                <p class="footer__copyright">
+                    &copy; 2025 Craft Furniture Co., Ltd. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
