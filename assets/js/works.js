@@ -516,8 +516,17 @@ function createWorkElement(work, index) {
     
     // Add click handler
     workItem.addEventListener('click', function() {
-        // Navigate to work detail page
-        window.location.href = `work-${work.id}.html`;
+        // Navigate to simulator page with work data
+        const params = new URLSearchParams({
+            category: work.category,
+            material: work.material,
+            width: work.specs.width,
+            depth: work.specs.depth,
+            height: work.specs.height,
+            thickness: work.specs.thickness,
+            ref: 'works'
+        });
+        window.location.href = `../simulator/?${params.toString()}`;
         
         // Track click
         if (typeof trackEvent === 'function') {
