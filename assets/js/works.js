@@ -465,9 +465,6 @@ function renderWorks(append = false) {
         // Update load more button
         updateLoadMoreButton();
         
-        // Initialize lazy loading
-        initLazyLoading();
-        
     }, append ? 200 : 500);
 }
 
@@ -483,10 +480,15 @@ function createWorkElement(work, index) {
     
     workItem.innerHTML = `
         <div class="work-item__image">
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOGY4Ii8+PC9zdmc+" 
-                 data-src="${work.image}" 
-                 alt="${work.title}" 
-                 loading="lazy">
+            <div class="image-placeholder image-placeholder--medium">
+                <div class="image-placeholder__content">
+                    <svg class="image-placeholder__icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                    </svg>
+                    <div class="image-placeholder__text">準備中</div>
+                    <div class="image-placeholder__subtext">${work.title}</div>
+                </div>
+            </div>
             <div class="work-item__overlay">
                 <div class="work-item__tags">
                     <span class="work-item__tag work-item__tag--category">${getCategoryName(work.category)}</span>
@@ -708,47 +710,7 @@ function updateLoadMoreButton() {
     }
 }
 
-function initLazyLoading() {
-    const images = document.querySelectorAll('.work-item img[data-src]');
-    
-    if ('IntersectionObserver' in window && images.length > 0) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    
-                    // Create a new image to preload
-                    const newImg = new Image();
-                    newImg.onload = function() {
-                        img.src = img.dataset.src;
-                        img.removeAttribute('data-src');
-                        img.classList.add('loaded');
-                    };
-                    newImg.onerror = function() {
-                        img.src = '../assets/images/placeholder-work.jpg';
-                        img.classList.add('error');
-                    };
-                    newImg.src = img.dataset.src;
-                    
-                    observer.unobserve(img);
-                }
-            });
-        }, {
-            rootMargin: '50px'
-        });
-        
-        images.forEach(img => {
-            img.classList.add('lazy');
-            imageObserver.observe(img);
-        });
-    } else {
-        // Fallback for browsers without IntersectionObserver
-        images.forEach(img => {
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-        });
-    }
-}
+// Lazy loading function removed - using static placeholders instead
 
 // Global function for reset button in no-results section
 window.resetFilters = resetFilters;
