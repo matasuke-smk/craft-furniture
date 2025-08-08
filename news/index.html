@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お知らせ | 株式会社クラフトファニチャー</title>
+    <meta name="description" content="クラフトファニチャーの最新情報、展示会出展情報、新商品のご案内などをお知らせいたします。">
+    <meta name="keywords" content="お知らせ, ニュース, 展示会, 新商品, イベント">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://craft-furniture.jp/news/">
+    <meta property="og:title" content="お知らせ | 株式会社クラフトファニチャー">
+    <meta property="og:description" content="クラフトファニチャーの最新情報、展示会出展情報をお知らせいたします。">
+    <meta property="og:image" content="https://craft-furniture.jp/assets/images/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/news.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__brand">
+                    <a href="/" class="nav__logo">
+                        <span class="nav__logo-text">Craft Furniture</span>
+                    </a>
+                </div>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="/works/" class="nav__link">施工事例</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/craftsmen/" class="nav__link">職人紹介</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/process/" class="nav__link">製作工程</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/simulator/" class="nav__link">見積もり</a>
+                        </li>
+                        <li class="nav__item dropdown">
+                            <a href="#" class="nav__link dropdown-toggle">サービス</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/wood-guide/" class="dropdown-link">木材図鑑</a></li>
+                                <li><a href="/voice/" class="dropdown-link">お客様の声</a></li>
+                                <li><a href="/flow/" class="dropdown-link">納品まで</a></li>
+                                <li><a href="/delivery/" class="dropdown-link">納品エリア</a></li>
+                                <li><a href="/showroom/" class="dropdown-link">ショールーム</a></li>
+                                <li><a href="/faq/" class="dropdown-link">よくある質問</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/about/" class="nav__link">会社概要</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/news/" class="nav__link">お知らせ</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav__actions">
+                    <a href="/contact/" class="btn btn--primary btn--small">お問い合わせ</a>
+                    <button class="nav__toggle" id="nav-toggle">
+                        <span class="nav__toggle-line"></span>
+                        <span class="nav__toggle-line"></span>
+                        <span class="nav__toggle-line"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__content">
+                <div class="container">
+                    <div class="hero__text">
+                        <h1 class="hero__title">お知らせ</h1>
+                        <p class="hero__description">最新情報・イベント情報をお届けします</p>
+                    </div>
+                </div>
+            </div>
+            <div class="breadcrumb">
+                <div class="container">
+                    <nav class="breadcrumb__nav">
+                        <a href="/" class="breadcrumb__link">ホーム</a>
+                        <span class="breadcrumb__separator">></span>
+                        <span class="breadcrumb__current">お知らせ</span>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Filter -->
+        <section class="news-filter section">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-category="all">すべて</button>
+                        <button class="filter-tab" data-category="exhibition">展示会・イベント</button>
+                        <button class="filter-tab" data-category="news">お知らせ</button>
+                        <button class="filter-tab" data-category="media">メディア掲載</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News List -->
+        <section class="news-list section">
+            <div class="container">
+                <div class="news-grid">
+                    
+                    <!-- Featured News (Exhibition) -->
+                    <article class="news-card news-card--featured" data-category="exhibition">
+                        <div class="news-card__image">
+                            <img src="../assets/images/news/exhibition-2024.jpg" alt="住宅展示場イベント2024" loading="lazy">
+                            <div class="news-card__category news-card__category--exhibition">展示会・イベント</div>
+                        </div>
+                        <div class="news-card__content">
+                            <time class="news-card__date" datetime="2024-03-15">2024.03.15</time>
+                            <h2 class="news-card__title">
+                                <a href="exhibition-2024.html">【4月開催】住宅展示場イベントに出展いたします</a>
+                            </h2>
+                            <p class="news-card__excerpt">
+                                4月13日〜21日に開催される「東京住宅展示場フェア2024」に出展いたします。期間中は職人による実演や木材サンプルの展示、特別価格でのオーダー受付も行います。
+                            </p>
+                            <div class="news-card__meta">
+                                <span class="news-card__tag important">重要</span>
+                                <span class="news-card__tag">イベント</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Regular News Items -->
+                    <article class="news-card" data-category="news">
+                        <div class="news-card__image">
+                            <img src="../assets/images/news/showroom-renewal.jpg" alt="ショールームリニューアル" loading="lazy">
+                            <div class="news-card__category">お知らせ</div>
+                        </div>
+                        <div class="news-card__content">
+                            <time class="news-card__date" datetime="2024-03-10">2024.03.10</time>
+                            <h2 class="news-card__title">
+                                <a href="showroom-renewal.html">ショールームをリニューアルしました</a>
+                            </h2>
+                            <p class="news-card__excerpt">
+                                より多くの展示品をご覧いただけるよう、ショールームを拡張リニューアルいたしました。新たに木材サンプルコーナーも設置しております。
+                            </p>
+                            <div class="news-card__meta">
+                                <span class="news-card__tag">ショールーム</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="media">
+                        <div class="news-card__image">
+                            <img src="../assets/images/news/magazine-feature.jpg" alt="雑誌掲載" loading="lazy">
+                            <div class="news-card__category news-card__category--media">メディア掲載</div>
+                        </div>
+                        <div class="news-card__content">
+                            <time class="news-card__date" datetime="2024-02-28">2024.02.28</time>
+                            <h2 class="news-card__title">
+                                <a href="magazine-feature.html">「住まいの設計」3月号に掲載されました</a>
+                            </h2>
+                            <p class="news-card__excerpt">
+                                住宅情報誌「住まいの設計」3月号の特集「職人の技が光る家具」にて、当社の一枚板テーブル製作工程が紹介されました。
+                            </p>
+                            <div class="news-card__meta">
+                                <span class="news-card__tag">メディア</span>
+                                <span class="news-card__tag">雑誌掲載</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="news">
+                        <div class="news-card__image">
+                            <img src="../assets/images/news/new-wood-collection.jpg" alt="新木材コレクション" loading="lazy">
+                            <div class="news-card__category">お知らせ</div>
+                        </div>
+                        <div class="news-card__content">
+                            <time class="news-card__date" datetime="2024-02-20">2024.02.20</time>
+                            <h2 class="news-card__title">
+                                <a href="new-wood-collection.html">春の新木材コレクション入荷のお知らせ</a>
+                            </h2>
+                            <p class="news-card__excerpt">
+                                希少価値の高いクルミ材とケヤキ材の一枚板を新たに入荷いたしました。数量限定のため、ご希望の方はお早めにお問い合わせください。
+                            </p>
+                            <div class="news-card__meta">
+                                <span class="news-card__tag">新商品</span>
+                                <span class="news-card__tag">限定</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="exhibition">
+                        <div class="news-card__image">
+                            <img src="../assets/images/news/workshop-event.jpg" alt="木工体験ワークショップ" loading="lazy">
+                            <div class="news-card__category news-card__category--exhibition">展示会・イベント</div>
+                        </div>
+                        <div class="news-card__content">
+                            <time class="news-card__date" datetime="2024-02-15">2024.02.15</time>
+                            <h2 class="news-card__title">
+                                <a href="workshop-event.html">木工体験ワークショップ開催のお知らせ</a>
+                            </h2>
+                            <p class="news-card__excerpt">
+                                3月16日（土）に親子で参加できる木工体験ワークショップを開催いたします。小さなスツール作りを通して、木の温もりを感じてください。
+                            </p>
+                            <div class="news-card__meta">
+                                <span class="news-card__tag">ワークショップ</span>
+                                <span class="news-card__tag">親子参加</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="news">
+                        <div class="news-card__image">
+                            <img src="../assets/images/news/year-end-notice.jpg" alt="年末年始のお知らせ" loading="lazy">
+                            <div class="news-card__category">お知らせ</div>
+                        </div>
+                        <div class="news-card__content">
+                            <time class="news-card__date" datetime="2024-02-01">2024.02.01</time>
+                            <h2 class="news-card__title">
+                                <a href="maintenance-service.html">定期メンテナンスサービス開始のお知らせ</a>
+                            </h2>
+                            <p class="news-card__excerpt">
+                                お客様により長く家具をお使いいただけるよう、定期メンテナンスサービスを開始いたします。5年、10年の節目でのメンテナンスを承ります。
+                            </p>
+                            <div class="news-card__meta">
+                                <span class="news-card__tag">サービス</span>
+                                <span class="news-card__tag">メンテナンス</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="media">
+                        <div class="news-card__image">
+                            <img src="../assets/images/news/tv-feature.jpg" alt="テレビ取材" loading="lazy">
+                            <div class="news-card__category news-card__category--media">メディア掲載</div>
+                        </div>
+                        <div class="news-card__content">
+                            <time class="news-card__date" datetime="2024-01-25">2024.01.25</time>
+                            <h2 class="news-card__title">
+                                <a href="tv-feature.html">NHK「首都圏情報ネタドリ！」で紹介されました</a>
+                            </h2>
+                            <p class="news-card__excerpt">
+                                1月22日放送のNHK「首都圏情報ネタドリ！」の特集「伝統技術を受け継ぐ若き職人たち」にて、当社の職人が取材されました。
+                            </p>
+                            <div class="news-card__meta">
+                                <span class="news-card__tag">テレビ</span>
+                                <span class="news-card__tag">NHK</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card" data-category="news">
+                        <div class="news-card__image">
+                            <img src="../assets/images/news/website-renewal.jpg" alt="ウェブサイトリニューアル" loading="lazy">
+                            <div class="news-card__category">お知らせ</div>
+                        </div>
+                        <div class="news-card__content">
+                            <time class="news-card__date" datetime="2024-01-15">2024.01.15</time>
+                            <h2 class="news-card__title">
+                                <a href="website-renewal.html">ウェブサイトをリニューアルしました</a>
+                            </h2>
+                            <p class="news-card__excerpt">
+                                より見やすく、使いやすいウェブサイトを目指してリニューアルいたしました。見積もりシミュレーターやショールーム予約機能も新たに追加しています。
+                            </p>
+                            <div class="news-card__meta">
+                                <span class="news-card__tag">ウェブサイト</span>
+                                <span class="news-card__tag">リニューアル</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <nav class="pagination-nav">
+                        <button class="pagination-btn pagination-btn--prev" disabled>
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                            </svg>
+                            前へ
+                        </button>
+                        
+                        <ul class="pagination-list">
+                            <li class="pagination-item">
+                                <button class="pagination-link active">1</button>
+                            </li>
+                            <li class="pagination-item">
+                                <button class="pagination-link">2</button>
+                            </li>
+                            <li class="pagination-item">
+                                <button class="pagination-link">3</button>
+                            </li>
+                            <li class="pagination-item pagination-ellipsis">...</li>
+                            <li class="pagination-item">
+                                <button class="pagination-link">8</button>
+                            </li>
+                        </ul>
+                        
+                        <button class="pagination-btn pagination-btn--next">
+                            次へ
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                            </svg>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter section section--dark">
+            <div class="container">
+                <div class="newsletter__content">
+                    <div class="newsletter__text">
+                        <h2 class="newsletter__title">最新情報をお届け</h2>
+                        <p class="newsletter__description">
+                            展示会の開催情報や新商品のご案内など、<br class="sp-hide">
+                            クラフトファニチャーの最新情報をメールでお届けします。
+                        </p>
+                    </div>
+                    
+                    <form class="newsletter__form">
+                        <div class="newsletter__input-group">
+                            <input 
+                                type="email" 
+                                class="newsletter__input" 
+                                placeholder="メールアドレスを入力"
+                                required
+                            >
+                            <button type="submit" class="btn btn--primary">
+                                登録する
+                            </button>
+                        </div>
+                        <p class="newsletter__note">
+                            ※いつでも配信停止できます。プライバシーポリシーに同意の上ご登録ください。
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="cta-section section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">お問い合わせ・ご相談</h2>
+                    <p class="cta-description">
+                        展示会やイベント、商品について<br class="sp-hide">
+                        ご質問がございましたらお気軽にお問い合わせください。
+                    </p>
+                    <div class="cta-actions">
+                        <a href="/contact/" class="btn btn--primary btn--large">お問い合わせ</a>
+                        <a href="tel:03-1234-5678" class="btn btn--outline btn--large">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            03-1234-5678
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="container">
+                <div class="footer__content">
+                    <div class="footer__section footer__section--brand">
+                        <h3 class="footer__title">Craft Furniture</h3>
+                        <p class="footer__description">
+                            一枚板を使った高品質な家具を、<br>
+                            熟練の職人が心を込めてお作りします。
+                        </p>
+                        <div class="footer__contact">
+                            <div class="footer__contact-item">
+                                <span class="footer__contact-label">TEL:</span>
+                                <a href="tel:03-1234-5678" class="footer__contact-link">03-1234-5678</a>
+                            </div>
+                            <div class="footer__contact-item">
+                                <span class="footer__contact-label">営業時間:</span>
+                                <span>9:00-18:00（土日祝除く）</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">サービス</h4>
+                        <ul class="footer__links">
+                            <li><a href="/works/" class="footer__link">施工事例</a></li>
+                            <li><a href="/craftsmen/" class="footer__link">職人紹介</a></li>
+                            <li><a href="/process/" class="footer__link">製作工程</a></li>
+                            <li><a href="/wood-guide/" class="footer__link">木材図鑑</a></li>
+                            <li><a href="/simulator/" class="footer__link">見積もり</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">サポート</h4>
+                        <ul class="footer__links">
+                            <li><a href="/voice/" class="footer__link">お客様の声</a></li>
+                            <li><a href="/flow/" class="footer__link">納品まで</a></li>
+                            <li><a href="/delivery/" class="footer__link">納品エリア</a></li>
+                            <li><a href="/showroom/" class="footer__link">ショールーム</a></li>
+                            <li><a href="/faq/" class="footer__link">よくある質問</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__section">
+                        <h4 class="footer__section-title">会社情報</h4>
+                        <ul class="footer__links">
+                            <li><a href="/about/" class="footer__link">会社概要</a></li>
+                            <li><a href="/news/" class="footer__link">お知らせ</a></li>
+                            <li><a href="/contact/" class="footer__link">お問い合わせ</a></li>
+                            <li><a href="/privacy/" class="footer__link">プライバシーポリシー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer__bottom-content">
+                    <div class="footer__social">
+                        <a href="https://instagram.com/craftfurniture" class="footer__social-link" target="_blank" rel="noopener">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <p class="footer__copyright">
+                        &copy; 2024 株式会社クラフトファニチャー. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/news.js"></script>
+</body>
+</html>
